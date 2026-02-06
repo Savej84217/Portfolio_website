@@ -1,0 +1,189 @@
+.skills {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background-color: var(--bg-primary);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.skills-section {
+  animation: fadeIn 0.8s ease;
+}
+
+.subsection-title {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.subsection-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+.technical-skills {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.skill-item {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateX(8px);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.skill-icon {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.skill-percentage {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.skill-bar {
+  height: 8px;
+  background-color: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.soft-skill-card {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.soft-skill-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.soft-skill-icon {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.soft-skill-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+}
+
+.certifications-list,
+.languages-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.certification-item,
+.language-item {
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+.certification-item:hover,
+.language-item:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateX(8px);
+}
+
+.cert-icon,
+.lang-icon {
+  color: var(--primary);
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.certification-item:hover .cert-icon,
+.language-item:hover .lang-icon {
+  color: white;
+}
+
+.cert-name,
+.lang-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.certification-item:hover .cert-name,
+.language-item:hover .lang-name {
+  color: white;
+}
+
+@media (max-width: 968px) {
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
